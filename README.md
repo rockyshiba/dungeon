@@ -1,5 +1,11 @@
 # Dnd5e
 
+## Spells
+
+Spells service initiated. Contains getSpells() to return all spells from dnd5e api.
+
+Spells component initated. Uses spells service. getSpells() from spell service called when component loads. 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
 
 ## Development server
