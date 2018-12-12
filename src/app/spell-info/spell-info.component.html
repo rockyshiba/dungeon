@@ -1,0 +1,42 @@
+<h2>{{ targetSpell.name }}</h2>
+<h3>Level</h3>
+<p>{{ targetSpell.level }}</p>
+<h3>Description</h3>
+<p *ngFor='let desc of targetSpell.desc'>
+  {{ desc }}
+</p>
+<h3>Range</h3>
+<p>{{ targetSpell.range }}</p>
+<h3>Components</h3>
+<p>{{ targetSpell.components }}</p>
+<h3>Ritual</h3>
+<p>{{ targetSpell.ritual }}</p>
+<h3>Duration</h3>
+<p>{{ targetSpell.duration }}</p>
+<h3>Concentration</h3>
+<p>{{ targetSpell.concentration }}</p>
+<h3>Casting Time</h3>
+<p>{{ targetSpell.casting_time }}</p>
+<h3>School</h3>
+<div>
+  <!--Link to school-->
+  <a href="#">
+    {{ targetSpell.school.name }}
+  </a>
+</div>
+<h3>Classes</h3>
+<div *ngFor="let class of targetSpell.classes">
+  <p>
+    <!--Link to class-->
+    <a href="#">{{ class.name }}</a>
+  </p>
+</div>
+<h3>Subclasses</h3>
+<div *ngFor="let subclass of targetSpell.subclasses">
+  <p>
+    <!--Link to subclass-->
+    <a href="#">{{ subclass.name }}</a>
+  </p>
+</div>
+<h3>Page</h3>
+<p>{{ targetSpell.page }}</p>

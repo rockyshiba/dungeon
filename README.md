@@ -2,9 +2,15 @@
 
 ## Spells
 
-Spells service initiated. Contains getSpells() to return all spells from dnd5e api.
+Routing initated for Spells and individual Spells.
 
-Spells component initated. Uses spells service. getSpells() from spell service called when component loads. 
+app.component.html now has navigation will Spells as its only member.
+
+spell.ts initiated due to missing definition from api. 
+
+spells.service.ts added new method to extract a singular spell from api.
+
+spell-info component initiated to display information of a single spell.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
 

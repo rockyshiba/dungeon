@@ -3,7 +3,7 @@
   Spells:
   <ul >
     <li *ngFor='let spell of spellList.results'>
-      <a href='{{ spell.url }}'>{{ spell.name }}</a>
+      <a routerLink='/spells/{{ this.getSpellNumber(spell.url) }}'>{{ spell.name }}</a>
     </li>
   </ul>
 </div>

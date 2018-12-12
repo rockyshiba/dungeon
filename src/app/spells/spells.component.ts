@@ -15,6 +15,10 @@ export class SpellsComponent implements OnInit {
 
   constructor(private spellService: SpellsService) { }
 
+  getSpellNumber(url: string): string{
+    return url.substr(url.lastIndexOf('/') + 1);
+  }
+
   ngOnInit() {
     this.spellService.getSpells().subscribe(results => this.spellList = results);
   }
