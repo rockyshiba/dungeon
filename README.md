@@ -1,10 +1,12 @@
 # Dnd5e
 
-## Spells search
+## Spells-master merge, Toolbox, dashboard
 
-spells.component.ts has a search method. Entire list of spells from api is stored in an object initially and a separate spells list is populated based on search criteria on the initial spells list.
+Spells branch merged with master. 
 
-spells.component.html has a drop down list including all of the spells from the api. Selecting one of these spells will change the link beside the drop down list to appropriate route to that spell's info page. A separate input:text is for the user to search for a spell by keyword.
+toolbox.ts class initated for common tools used throughout application. Spells and Spells-info components have had their common methods replaced with toolbox method to get index from api url.
+
+Dashboard component intiated to contain homepage contents. Router now has '' route to navigate to this component.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
 

@@ -31,17 +31,9 @@
     <p>Results: {{ searchSpellList.count }} found.</p>
     <ul>
       <li *ngFor='let spell of searchSpellList.results'>
-        <a routerLink='/spells/{{ this.getSpellNumber(spell.url) }}'>{{ spell.name }}</a>
+        <a routerLink='/spells/{{ this.tools.getEntityNumber(spell.url) }}'>{{ spell.name }}</a>
       </li>
     </ul>
   </div>
-  <!-- <ng-template #noSearch>
-    <div>
-      <ul>
-        <li *ngFor='let spell of spellList.results'>
-          <a routerLink='/spells/{{ this.getSpellNumber(spell.url) }}'>{{ spell.name }}</a>
-        </li>
-      </ul>
-    </div>
-  </ng-template> -->
 </div>
+<a routerLink=''>Go back to previous page.</a>

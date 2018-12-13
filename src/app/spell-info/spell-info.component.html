@@ -1,3 +1,4 @@
+<section *ngIf='targetSpell; else noSpell'>
 <h2>{{ targetSpell.name }}</h2>
 <h3>Level</h3>
 <p>{{ targetSpell.level }}</p>
@@ -40,3 +41,7 @@
 </div>
 <h3>Page</h3>
 <p>{{ targetSpell.page }}</p>
+</section>
+<ng-template #noSpell>
+  <p>No spell has been found. <a routerLink='/spells/'>Click here to go back to the spells page.</a></p>
+</ng-template>
