@@ -1,9 +1,47 @@
 <div *ngIf='spellList'>
-  Count: {{ spellList.count }}
+  <p>Count: {{ spellList.count }}</p>
+  <div id='search--browse'>
+    <div>
+      <h2>Find a spell</h2>
+      <p>Use the drop down menu below to find a spell. List is alphabetically ordered.</p>
+    </div>
+    <div>
+      <select (change)='changeSpellIndex(spellSelect.value)' #spellSelect>
+        <option selected='selected' value=''>--Select a spell--</option>
+        <option *ngFor='let spell of spellList.results' value='{{ spell.url }}'>
+          {{ spell.name }}
+        </option>
+      </select>
+      <a routerLink='/spells/{{ spellIndex }}'>Click for Spell info</a>
+    </div>
+  </div>
+  <div id='search--spell'>
+    <div>
+      <h2>Search spell by name</h2>
+      <p>
+        Enter a keyword below to search for specific spells.
+      </p>
+    </div>
+    <div>
+      <input type="text" name="" id="search--input-text" (keyup)='searchSpells(searchTerm.value)' #searchTerm>
+    </div>
+  </div>
   Spells:
-  <ul >
-    <li *ngFor='let spell of spellList.results'>
-      <a routerLink='/spells/{{ this.getSpellNumber(spell.url) }}'>{{ spell.name }}</a>
-    </li>
-  </ul>
+  <div *ngIf='searchSpellList.results'>
+    <p>Results: {{ searchSpellList.count }} found.</p>
+    <ul>
+      <li *ngFor='let spell of searchSpellList.results'>
+        <a routerLink='/spells/{{ this.getSpellNumber(spell.url) }}'>{{ spell.name }}</a>
+      </li>
+    </ul>
+  </div>
+  <!-- <ng-template #noSearch>
+    <div>
+      <ul>
+        <li *ngFor='let spell of spellList.results'>
+          <a routerLink='/spells/{{ this.getSpellNumber(spell.url) }}'>{{ spell.name }}</a>
+        </li>
+      </ul>
+    </div>
+  </ng-template> -->
 </div>

@@ -1,16 +1,10 @@
 # Dnd5e
 
-## Spells
+## Spells search
 
-Routing initated for Spells and individual Spells.
+spells.component.ts has a search method. Entire list of spells from api is stored in an object initially and a separate spells list is populated based on search criteria on the initial spells list.
 
-app.component.html now has navigation will Spells as its only member.
-
-spell.ts initiated due to missing definition from api. 
-
-spells.service.ts added new method to extract a singular spell from api.
-
-spell-info component initiated to display information of a single spell.
+spells.component.html has a drop down list including all of the spells from the api. Selecting one of these spells will change the link beside the drop down list to appropriate route to that spell's info page. A separate input:text is for the user to search for a spell by keyword.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
 
