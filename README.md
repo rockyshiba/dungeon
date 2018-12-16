@@ -1,14 +1,11 @@
 # Dnd5e
 
-## Spells-master merge, Toolbox, dashboard
+## Upgraded to Angular 7.1.3, core and CLI.
 
-Spells branch merged with master. 
-
-toolbox.ts class initated for common tools used throughout application. Spells and Spells-info components have had their common methods replaced with toolbox method to get index from api url.
-
-Dashboard component intiated to contain homepage contents. Router now has '' route to navigate to this component.
+Project updated to 7.1.3 from 6. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
+CLI version is now 7.1.3.
 
 ## Development server
 
