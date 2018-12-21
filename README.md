@@ -1,14 +1,12 @@
 # Dnd5e
 
-## Loading spinner
+## Virtual scrolling
 
-Loading spinner, using CSS only, added for global use. Only appears before a task is finished (ie. AJAX) and disappears after task completion.
+New feature of Angular 7: [virtual scrolling](https://material.angular.io/cdk/scrolling/overview). Loads only the items that are in view.
 
-Loading spinner contained in its own component: loading-spinner. 
+Virtual scrolling added to app.module.ts.
 
-Example of its use is in spells component (route: '/spells').
-
-Original CSS credit goes to http://tobiasahlin.com/spinkit/
+Example of its use in spells component.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
 

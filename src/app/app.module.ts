@@ -9,6 +9,8 @@ import { SpellInfoComponent } from './spell-info/spell-info.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
+import { ScrollingModule } from '@angular/cdk/scrolling';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ScrollingModule
   ],
   providers: [
     HttpClientModule

@@ -1,0 +1,7 @@
+.spells--viewport{
+    height: 200px;
+}
+
+.spells--viewport li{
+    height: 20px;
+}

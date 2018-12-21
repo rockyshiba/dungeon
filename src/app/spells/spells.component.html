@@ -30,11 +30,15 @@
   Spells:
   <div *ngIf='searchSpellList.results'>
     <p>Results: {{ searchSpellList.count }} found.</p>
-    <ul>
-      <li *ngFor='let spell of searchSpellList.results'>
-        <a routerLink='/spells/{{ this.tools.getEntityNumber(spell.url) }}'>{{ spell.name }}</a>
-      </li>
-    </ul>
+    <cdk-virtual-scroll-viewport *ngIf='searchSpellList' class='spells--viewport' itemSize='20'>
+      <ul>
+        <ng-container *cdkVirtualFor='let spell of searchSpellList.results'>
+          <li>
+            <a routerLink='/spells/{{ this.tools.getEntityNumber(spell.url) }}'>{{ spell.name }}</a>
+          </li>
+        </ng-container>
+      </ul>
+    </cdk-virtual-scroll-viewport>
   </div>
 </div>
 <a routerLink=''>Go back to previous page.</a>
