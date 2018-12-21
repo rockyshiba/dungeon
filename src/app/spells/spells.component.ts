@@ -15,6 +15,7 @@ export class SpellsComponent implements OnInit {
   searchSpellList: NamedAPIResourceList = new NamedAPIResourceList();
   spellIndex: string;
   tools: Toolbox = new Toolbox();
+  loaded: boolean = false; // determines loading spinner component
 
   constructor(private spellService: SpellsService) { }
 
@@ -38,7 +39,10 @@ export class SpellsComponent implements OnInit {
   ngOnInit() {
     this.searchSpellList.results = [];
     this.searchSpellList.count = 0;
-    this.spellService.getSpells().subscribe(results => this.spellList = results);
+    this.spellService.getSpells().subscribe(results => {
+      this.spellList = results;
+      this.loaded = true;
+    });
   }
 
 }

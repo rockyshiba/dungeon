@@ -1,11 +1,16 @@
 # Dnd5e
 
-## Upgraded to Angular 7.1.3, core and CLI.
+## Loading spinner
 
-Project updated to 7.1.3 from 6. 
+Loading spinner, using CSS only, added for global use. Only appears before a task is finished (ie. AJAX) and disappears after task completion.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
-CLI version is now 7.1.3.
+Loading spinner contained in its own component: loading-spinner. 
+
+Example of its use is in spells component (route: '/spells').
+
+Original CSS credit goes to http://tobiasahlin.com/spinkit/
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
 
 ## Development server
 
