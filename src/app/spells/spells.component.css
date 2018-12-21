@@ -5,3 +5,7 @@
 .spells--viewport li{
     height: 20px;
 }
+
+.spells--viewport a{
+    height: 20px;
+}

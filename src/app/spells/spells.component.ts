@@ -7,7 +7,7 @@ import { Toolbox } from '../toolbox';
 @Component({
   selector: 'app-spells',
   templateUrl: './spells.component.html',
-  styleUrls: ['./spells.component.css']
+  styleUrls: ['./spells.component.css', '../../material-nav-list-items.css']
 })
 export class SpellsComponent implements OnInit {
 

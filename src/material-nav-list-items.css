@@ -1,0 +1,8 @@
+/* meant to override Angular Material's default colour scheme for list items */
+.mat-list-base .mat-list-item{
+    color: #0000EE;
+}
+
+a:visited{
+    color: #551A8B !important;
+}

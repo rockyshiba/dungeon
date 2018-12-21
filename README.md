@@ -1,12 +1,34 @@
 # Dnd5e
 
-## Virtual scrolling
+## Angular Material
 
-New feature of Angular 7: [virtual scrolling](https://material.angular.io/cdk/scrolling/overview). Loads only the items that are in view.
+Included [Angular Material](https://material.angular.io/) into project for the purposes of appealing to modern web designs.
 
-Virtual scrolling added to app.module.ts.
+Examples of its use demonstrated in spells component. The following Materials were used: 
 
-Example of its use in spells component.
++ select / drop down list
++ input:text
++ list:nav
+
+### [Drop down list](https://material.angular.io/components/select/overview)
+
+A select list can be inside mat-form-field so long as the select element has a matNativeControl attribute. Accessibility is handled by mat-label.
+
+The selection from the complete list of spells demonstrates this.
+
+### [Input text](https://material.angular.io/components/input/overview)
+
+Inputs with a 'clearing' feature are done with input and button elements as siblings and matInput and mat-button as attributes, respectively. The 'clearing' button is done as a button element with additional attributes matSuffix, mat-icon-button. For accessibility purposes, aria-label is provided with an appropriate value ('Clear' in this case). Child of button element is max-icon with child 'close'. 
+
+The spell search input demonstrates this.
+
+### [List with navigation](https://material.angular.io/components/list/overview#navigation-lists)
+
+Navigational lists can be generated using mat-nav-list elements. Accessibility is handled when using mat-nav-list with the generated role='navigation' attribute and value. List is rendered using [virtual scrolling](https://material.angular.io/cdk/scrolling/overview).
+
+Default styling of links is black. Addition of material-nav-list-items.css for the purpose of overriding the default styling to familiar a:link blue.
+
+The spell search input results demonstrates this.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
 

@@ -7,12 +7,15 @@
       <p>Use the drop down menu below to find a spell. List is alphabetically ordered.</p>
     </div>
     <div>
-      <select (change)='changeSpellIndex(spellSelect.value)' #spellSelect>
-        <option selected='selected' value=''>--Select a spell--</option>
-        <option *ngFor='let spell of spellList.results' value='{{ spell.url }}'>
-          {{ spell.name }}
-        </option>
-      </select>
+      <mat-form-field>
+        <mat-label>Select a spell</mat-label>
+        <select matNativeControl (change)='changeSpellIndex(spellSelect.value)' #spellSelect>
+          <option selected='selected' value=''>--Select a spell--</option>
+          <option *ngFor='let spell of spellList.results' value='{{ spell.url }}'>
+            {{ spell.name }}
+          </option>
+        </select>
+      </mat-form-field>
       <a routerLink='/spells/{{ spellIndex }}'>Click for Spell info</a>
     </div>
   </div>
@@ -24,13 +27,19 @@
       </p>
     </div>
     <div>
-      <input type="text" name="" id="search--input-text" (keyup)='searchSpells(searchTerm.value)' #searchTerm>
+      <mat-form-field>
+        <mat-label>Find a spell</mat-label>
+        <input matInput placeholder='Spell' type="text" name="" id="search--input-text" (keyup)='searchSpells(searchTerm.value)' #searchTerm>
+        <button mat-button *ngIf='searchTerm.value' matSuffix mat-icon-button aria-label='Clear' (click)="searchTerm.value = ''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
     </div>
   </div>
   Spells:
   <div *ngIf='searchSpellList.results'>
-    <p>Results: {{ searchSpellList.count }} found.</p>
-    <cdk-virtual-scroll-viewport *ngIf='searchSpellList' class='spells--viewport' itemSize='20'>
+    <p>Results: <strong>{{ searchSpellList.count }} found.</strong></p>
+    <!--<cdk-virtual-scroll-viewport *ngIf='searchSpellList' class='spells--viewport' itemSize='20'>
       <ul>
         <ng-container *cdkVirtualFor='let spell of searchSpellList.results'>
           <li>
@@ -38,6 +47,12 @@
           </li>
         </ng-container>
       </ul>
+    </cdk-virtual-scroll-viewport>-->
+    <!--Material list-->
+    <cdk-virtual-scroll-viewport *ngIf='searchSpellList' class='spells--viewport' itemSize='20'>
+      <mat-nav-list>
+        <a mat-list-item *cdkVirtualFor='let spell of searchSpellList.results' routerLink='/spells/{{ this.tools.getEntityNumber(spell.url) }}' routerLinkActive='active-list-item'>{{ spell.name }}</a>
+      </mat-nav-list>
     </cdk-virtual-scroll-viewport>
   </div>
 </div>
