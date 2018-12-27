@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -16,6 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatListModule } from '@angular/material/list';
+import { ClassesComponent } from './classes/classes.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MatListModule } from '@angular/material/list';
     SpellsComponent,
     SpellInfoComponent,
     DashboardComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    ClassesComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import { MatListModule } from '@angular/material/list';
     MatListModule
   ],
   providers: [
-    HttpClientModule
+    HttpClientModule,
+    Title
   ],
   bootstrap: [AppComponent]
 })

@@ -1,34 +1,14 @@
 # Dnd5e
 
-## Angular Material
+## Classes
 
-Included [Angular Material](https://material.angular.io/) into project for the purposes of appealing to modern web designs.
+Start of Classes feature with Classes component.
 
-Examples of its use demonstrated in spells component. The following Materials were used: 
+Content of Title and Meta tag updates based on component loading. Title and Meta tags are updated from defined meta elements in index.html.
 
-+ select / drop down list
-+ input:text
-+ list:nav
+Newly created component now correctly changes Title in header using injected predefined [Title service provided by Angular](https://angular.io/api/platform-browser/Title).
 
-### [Drop down list](https://material.angular.io/components/select/overview)
-
-A select list can be inside mat-form-field so long as the select element has a matNativeControl attribute. Accessibility is handled by mat-label.
-
-The selection from the complete list of spells demonstrates this.
-
-### [Input text](https://material.angular.io/components/input/overview)
-
-Inputs with a 'clearing' feature are done with input and button elements as siblings and matInput and mat-button as attributes, respectively. The 'clearing' button is done as a button element with additional attributes matSuffix, mat-icon-button. For accessibility purposes, aria-label is provided with an appropriate value ('Clear' in this case). Child of button element is max-icon with child 'close'. 
-
-The spell search input demonstrates this.
-
-### [List with navigation](https://material.angular.io/components/list/overview#navigation-lists)
-
-Navigational lists can be generated using mat-nav-list elements. Accessibility is handled when using mat-nav-list with the generated role='navigation' attribute and value. List is rendered using [virtual scrolling](https://material.angular.io/cdk/scrolling/overview).
-
-Default styling of links is black. Addition of material-nav-list-items.css for the purpose of overriding the default styling to familiar a:link blue.
-
-The spell search input results demonstrates this.
+Newly created component now correcly changes meta tags using injected predefined [Meta service provided by Angular](https://angular.io/api/platform-browser/Meta).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
 

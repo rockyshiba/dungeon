@@ -11,7 +11,7 @@ export class Class {
     proficiency_choices: Choice[];
     proficiencies: NamedAPIResource[];
     starting_equipiment: ClassAPIResource;
-    class_levels: Level[]; //Level[]
+    class_levels: Level[]; // Level[]
     subclasses: NamedAPIResource[];
     spellcasting: ClassAPIResource[];
     url: string;
