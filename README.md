@@ -1,14 +1,16 @@
 # Dnd5e
 
-## Classes
+## Classes continued
 
-Start of Classes feature with Classes component.
+Class model(s) (class.ts) fixed based on actual returned values from api intead of models defined by api documentation.
 
-Content of Title and Meta tag updates based on component loading. Title and Meta tags are updated from defined meta elements in index.html.
+Initiated classes.service.ts with methods to retrieve all classes and specific class information based on url. 
 
-Newly created component now correctly changes Title in header using injected predefined [Title service provided by Angular](https://angular.io/api/platform-browser/Title).
+Initiated class-info component to contain information on a single class.
 
-Newly created component now correcly changes meta tags using injected predefined [Meta service provided by Angular](https://angular.io/api/platform-browser/Meta).
+Classes component displays all classes and contains the class-info component.
+
+Project now uses the Title and Meta services provided by Angular for the purpose of changing the head values of the document as the user navigates.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
 

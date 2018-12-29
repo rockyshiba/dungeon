@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
+import { Class } from '../class';
+import { NamedAPIResourceList } from '../named-apiresource-list';
+import { ClassesService } from '../classes.service';
 
 @Component({
   selector: 'app-classes',
@@ -8,9 +11,13 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class ClassesComponent implements OnInit {
 
+  classList: NamedAPIResourceList;
+  classes: Class[];
+
   constructor(
     private titleService: Title,
-    private metaService: Meta
+    private metaService: Meta,
+    private classesService: ClassesService
   ) { }
 
   ngOnInit() {
@@ -19,6 +26,9 @@ export class ClassesComponent implements OnInit {
     this.metaService.updateTag({
       name: 'description', content: 'DnD5e classes information'
     });
+
+    // get list of classes
+    this.classesService.getClasses().subscribe( result => this.classList = result );
   }
 
 }

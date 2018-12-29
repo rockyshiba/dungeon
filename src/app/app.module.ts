@@ -17,6 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatListModule } from '@angular/material/list';
 import { ClassesComponent } from './classes/classes.component';
+import { ClassInfoComponent } from './class-info/class-info.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ClassesComponent } from './classes/classes.component';
     SpellInfoComponent,
     DashboardComponent,
     LoadingSpinnerComponent,
-    ClassesComponent
+    ClassesComponent,
+    ClassInfoComponent
   ],
   imports: [
     BrowserModule,

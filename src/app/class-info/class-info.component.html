@@ -1,0 +1,48 @@
+<app-loading-spinner *ngIf='!targetClass'></app-loading-spinner>
+<div *ngIf='targetClass'>
+  <div>
+    Hit die: {{ targetClass.hit_die }}
+  </div>
+  <div>
+    <h4>Proficiency choices:</h4>
+    <ul *ngFor='let choice of targetClass.proficiency_choices'>
+      <li>Choose: {{ choice.choose }}</li>
+      <li>Type: {{ choice.type }}</li>
+      <ul *ngFor='let from of choice.from' >
+        <li>{{ from.name }}</li>
+        <li>Url: {{ from.url }}</li>
+      </ul>
+    </ul>
+  </div>
+  <div>
+    <h4>Proficiencies:</h4>
+    <ul *ngFor='let prof of targetClass.proficiencies'>
+      <li>{{ prof.name }}</li>
+      <li>{{ prof.url }}</li>
+    </ul>
+  </div>
+  <div>
+    <h4>Starting equipment:</h4>
+    <div>
+      {{ targetClass.starting_equipment.class }} {{ targetClass.starting_equipment.url }}
+    </div>
+  </div>
+  <div>
+    <h4>Class levels:</h4>
+    <div>
+      {{ targetClass.class_levels.class }} {{ targetClass.class_levels.url }}
+    </div>
+  </div>
+  <div >
+    <h4>Subclasses:</h4>
+    <ul *ngFor='let sc of targetClass.subclasses'>
+      <li >{{ sc.name }} {{ sc.url }}</li>
+    </ul>
+  </div>
+  <div *ngIf='targetClass.spellcasting'>
+    <h4>Spellcasting:</h4>
+    <div>
+      {{ targetClass.spellcasting.class }} {{ targetClass.spellcasting.url }}
+    </div>
+  </div>
+</div>
