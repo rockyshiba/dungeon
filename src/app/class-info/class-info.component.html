@@ -1,5 +1,11 @@
+<div>
+  <a routerLink="/classes" routerLinkActive="router-link-active">Go back to Classes</a>
+</div>
 <app-loading-spinner *ngIf='!targetClass'></app-loading-spinner>
 <div *ngIf='targetClass'>
+  <h2>
+    {{ targetClass.name }}
+  </h2>
   <div>
     Hit die: {{ targetClass.hit_die }}
   </div>

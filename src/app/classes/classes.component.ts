@@ -4,6 +4,8 @@ import { Class } from '../class';
 import { NamedAPIResourceList } from '../named-apiresource-list';
 import { ClassesService } from '../classes.service';
 
+import { Toolbox } from '../toolbox';
+
 @Component({
   selector: 'app-classes',
   templateUrl: './classes.component.html',
@@ -13,6 +15,8 @@ export class ClassesComponent implements OnInit {
 
   classList: NamedAPIResourceList;
   classes: Class[];
+
+  toolbox: Toolbox = new Toolbox();
 
   constructor(
     private titleService: Title,

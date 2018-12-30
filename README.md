@@ -1,16 +1,8 @@
 # Dnd5e
 
-## Classes continued
+## Classes navigation
 
-Class model(s) (class.ts) fixed based on actual returned values from api intead of models defined by api documentation.
-
-Initiated classes.service.ts with methods to retrieve all classes and specific class information based on url. 
-
-Initiated class-info component to contain information on a single class.
-
-Classes component displays all classes and contains the class-info component.
-
-Project now uses the Title and Meta services provided by Angular for the purpose of changing the head values of the document as the user navigates.
+Classes remodeled to navigate to individual classes from a master list of classes. Individual classes given their own route via their index.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
 
