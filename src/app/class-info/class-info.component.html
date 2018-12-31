@@ -42,7 +42,10 @@
   <div >
     <h4>Subclasses:</h4>
     <ul *ngFor='let sc of targetClass.subclasses'>
-      <li >{{ sc.name }} {{ sc.url }}</li>
+      <li>
+        <h5>{{ sc.name }}</h5>
+        <app-subclass [url]='sc.url'></app-subclass>
+      </li>
     </ul>
   </div>
   <div *ngIf='targetClass.spellcasting'>

@@ -1,4 +1,4 @@
-import { NamedAPIResource } from "./named-apiresource";
+import { NamedAPIResource } from './named-apiresource';
 
 export class Subclass {
     _id: string;

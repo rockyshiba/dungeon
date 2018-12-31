@@ -1,7 +1,6 @@
-import { Choice } from "./choice";
-import { NamedAPIResource } from "./named-apiresource";
-import { ClassAPIResource } from "./class-apiresource";
-import { Level } from "./level";
+import { Choice } from './choice';
+import { NamedAPIResource } from './named-apiresource';
+import { ClassAPIResource } from './class-apiresource';
 
 export class Class {
     _id: string;
@@ -10,7 +9,7 @@ export class Class {
     hit_die: number;
     proficiency_choices: Choice[];
     proficiencies: NamedAPIResource[];
-    starting_equipiment: ClassAPIResource;
+    starting_equipment: ClassAPIResource;
     class_levels: ClassAPIResource;
     subclasses: NamedAPIResource[];
     spellcasting: ClassAPIResource;

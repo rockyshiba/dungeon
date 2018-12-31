@@ -1,8 +1,12 @@
 # Dnd5e
 
-## Classes navigation
+## Subclasses
 
-Classes remodeled to navigate to individual classes from a master list of classes. Individual classes given their own route via their index.
+class.ts issue fixed: property starting_equipiment corrected to starting_equipment.
+
+Nothing significant was changed in spells.service.ts nor in subclass.ts. The linter made them more consistent with the rest of the project.
+
+Subclass component initiated. Subclass component content is displayed within the class-info component. Subclass service was not initiated in favour of the async pipe in subclass.component.html.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
 
