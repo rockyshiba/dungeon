@@ -1,8 +1,25 @@
 <nav>
-  <div>
-    <h2><a routerLink='/spells/'>Spells</a></h2>
-    <p>
-      A complete list of the Spells used in DnD5e. Find or browse the spells you want more information on. <a routerLink='spells'>Click here for spells.</a>
-    </p>
-  </div>
+  <mat-grid-list cols='3' [rowHeight]='breakpointRowHeight' role='list' (window:resize)='resizeTiles()'>
+    <mat-grid-tile *ngFor='let content of dashboardContent'
+      [colspan]='breakpointColSpan'
+      role='listitem'>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <a routerLink='{{ content.routerLink }}'>{{ content.title }}</a>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            {{ content.content }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>
+            <a routerLink='{{ content.routerLink }}'>{{ content.linkText }}</a>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
 </nav>
