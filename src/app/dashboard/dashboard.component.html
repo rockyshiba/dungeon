@@ -1,25 +1,15 @@
 <nav>
-  <mat-grid-list cols='3' [rowHeight]='breakpointRowHeight' role='list' (window:resize)='resizeTiles()'>
-    <mat-grid-tile *ngFor='let content of dashboardContent'
-      [colspan]='breakpointColSpan'
-      role='listitem'>
-      <mat-card>
-        <mat-card-header>
-          <mat-card-title>
-            <a routerLink='{{ content.routerLink }}'>{{ content.title }}</a>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p>
-            {{ content.content }}
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>
-            <a routerLink='{{ content.routerLink }}'>{{ content.linkText }}</a>
-          </button>
-        </mat-card-actions>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let item of dashboardNav" class="col-lg-4 d-flex">
+        <div class='card bg-light'>
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title"><a routerLink='{{ item.route }}'>{{ item.title }}</a></h2>
+            <p class="card-text flex-grow-1">{{ item.description }}</p>
+            <a routerLink="{{ item.route }}" routerLinkActive="router-link-active" class="card-link">Click here for {{ item.title }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </nav>

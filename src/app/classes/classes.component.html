@@ -1,0 +1,8 @@
+<app-loading-spinner *ngIf='!classList'></app-loading-spinner>
+<nav *ngIf='classList'>
+  <div *ngFor='let class of classList.results'>
+    <h3>
+      <a routerLink='/classes/{{ this.toolbox.getEntityNumber(class.url) }}'>{{ class.name }}</a>
+    </h3>
+  </div>
+</nav>

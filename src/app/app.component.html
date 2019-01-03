@@ -1,10 +1,23 @@
 <header>
-  <nav>
-    <a routerLink='' routerLinkActive='active'>Home</a>
-    <a routerLink='spells' routerLinkActive='active'>Spells</a>
+  <nav class="navbar fixed-top bg-info">
+    <div class="container">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink=''>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="spells">Spells</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="classes">Classes</a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>
 <main>
-  <router-outlet></router-outlet>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
 </main>
 <footer></footer>

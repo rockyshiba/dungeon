@@ -1,0 +1,15 @@
+<div *ngIf='subclass$ | async as subclass'>
+  <h6>Subclass: {{ subclass.name }}</h6>
+  <h6>Subclass Flavour</h6>
+  <p>
+    {{ subclass.subclass_flavor }}
+  </p>
+  <h6>Description</h6>
+  <p>
+    {{ subclass.desc }}
+  </p>
+  <h6>Features</h6>
+  <p *ngFor='let feature of subclass.features'>
+    {{ feature.name }} {{ feature.url }}
+  </p>
+</div>

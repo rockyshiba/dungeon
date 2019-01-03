@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -18,6 +18,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
+import { ClassesComponent } from './classes/classes.component';
+import { ClassInfoComponent } from './class-info/class-info.component';
+import { SubclassComponent } from './subclass/subclass.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { MatCardModule } from '@angular/material/card';
     SpellsComponent,
     SpellInfoComponent,
     DashboardComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    ClassesComponent,
+    ClassInfoComponent,
+    SubclassComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +48,8 @@ import { MatCardModule } from '@angular/material/card';
     MatCardModule
   ],
   providers: [
-    HttpClientModule
+    HttpClientModule,
+    Title
   ],
   bootstrap: [AppComponent]
 })

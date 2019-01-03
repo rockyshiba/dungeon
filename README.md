@@ -1,10 +1,12 @@
 # Dnd5e
 
-## Angular Material: Navigation
+## Classes Merge
 
-Included [Angular Material](https://material.angular.io/) into project for the purposes of visually appealing to modern web designs.
+Class branch merged into Master. Conflicts resolved.
 
-An attempt to use MatCard and MatGridList. Does not scale easily. Requires custom javascript for responsiveness. 
+## Bootstrap
+
+Bootstrap CSS included in project via npm and angular.json. Dashboard starting to use bootstrap cards and navigation.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
 

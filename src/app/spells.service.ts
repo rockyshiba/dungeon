@@ -9,13 +9,13 @@ import { Spell } from './spell';
   providedIn: 'root'
 })
 export class SpellsService {
-  private spellsUrl: string = 'http://www.dnd5eapi.co/api/spells/';
+  private spellsUrl = 'http://www.dnd5eapi.co/api/spells/';
 
-  getSpells(): Observable<NamedAPIResourceList>{
+  getSpells(): Observable<NamedAPIResourceList> {
     return this.http.get<NamedAPIResourceList>(this.spellsUrl);
   }
 
-  getSpell(id: string): Observable<Spell>{
+  getSpell(id: string): Observable<Spell> {
     return this.http.get<Spell>(this.spellsUrl + id);
   }
 
