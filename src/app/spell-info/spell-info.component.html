@@ -1,5 +1,6 @@
 <section *ngIf='targetSpell; else noSpell'>
 <h2>{{ targetSpell.name }}</h2>
+<a routerLink='/spells/'>Click here to go back to the spells page.</a>
 <h3>Level</h3>
 <p>{{ targetSpell.level }}</p>
 <h3>Description</h3>
@@ -29,15 +30,19 @@
 <div *ngFor="let class of targetSpell.classes">
   <p>
     <!--Link to class-->
-    <a href="#">{{ class.name }}</a>
+    <a routerLink="/classes/{{ this.toolbox.getEntityNumber(class.url) }}">{{ class.name }}</a>
   </p>
 </div>
 <h3>Subclasses</h3>
 <div *ngFor="let subclass of targetSpell.subclasses">
-  <p>
-    <!--Link to subclass-->
-    <a href="#">{{ subclass.name }}</a>
-  </p>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header role="button" aria-controls="subclass.name">
+        <h4>{{ subclass.name }}</h4>
+      </mat-expansion-panel-header>
+      <app-subclass [url]="subclass.url"></app-subclass>
+    </mat-expansion-panel>
+  </mat-accordion>
 </div>
 <h3>Page</h3>
 <p>{{ targetSpell.page }}</p>

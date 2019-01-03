@@ -1,8 +1,12 @@
 # Dnd5e
 
-## Classes Merge
+## Spell info additions
 
-Class branch merged into Master. Conflicts resolved.
+Link to class associated with spell established with routerLink.
+
+Subclasses associated with spell inside [Angular Material Expansion Panel](https://material.angular.io/components/expansion/overview) otherwise known as accordions.
+
+Link to spells page added to spell-info component.
 
 ## Bootstrap
 
