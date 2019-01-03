@@ -1,8 +1,12 @@
 # Dnd5e
 
-## Classes Merge
+## Spells info additions
 
-Class branch merged into Master. Conflicts resolved.
+Link to class associated with spell established via router link.
+
+[Angular Material Expansion](https://material.angular.io/components/expansion/api) included into project.
+
+Subclasses associated with spell included inside expansion panels on spell-info page using Angular Material Expansion.
 
 ## Bootstrap
 

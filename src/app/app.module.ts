@@ -21,6 +21,7 @@ import { MatCardModule } from '@angular/material/card';
 import { ClassesComponent } from './classes/classes.component';
 import { ClassInfoComponent } from './class-info/class-info.component';
 import { SubclassComponent } from './subclass/subclass.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { SubclassComponent } from './subclass/subclass.component';
     MatSelectModule,
     MatListModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    MatExpansionModule
   ],
   providers: [
     HttpClientModule,
