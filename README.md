@@ -1,12 +1,14 @@
 # Dnd5e
 
-## Conditions component
+Conditions component corrected: conditions$ is now correctly typed to NamedAPIResourceList.
 
-Initation of conditions component. Async pipe being used to retrieve all conditions from api. Mat-expansion-panel set up to contain condition information.
+Conditions now appears in the main navigation at the top of the page. Conditions now appear on the dashboard navigation.
 
-Conditions component registered in router to "conditions".
+## Conditions info component
 
-Condition model fixed to match result returned by api (_id, index, name, desc, url)
+Conditions info component initialized to contain information on a single condition based on the provided url. Appears as part of the expanded content inside Conditions component.
+
+Disc accompanying text is from the api. Consequently, the list-style-type has been set to 'none' to prevent the duplication of discs.
 
 ## Bootstrap
 

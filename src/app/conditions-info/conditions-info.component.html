@@ -1,0 +1,8 @@
+<app-loading-spinner *ngIf='!condition$'></app-loading-spinner>
+<div *ngIf='condition$ | async as cond'>
+  <ul>
+    <li *ngFor='let description of cond.desc'>
+      {{ description }}
+    </li>
+  </ul>
+</div>

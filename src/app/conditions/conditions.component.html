@@ -3,8 +3,9 @@
 <app-loading-spinner *ngIf='!conditions$'></app-loading-spinner>
 <div *ngIf='conditions$ | async as conditions'>
   <mat-expansion-panel *ngFor='let condition of conditions.results'>
-    <mat-expansion-panel-header>
-      <h3>{{ condition.name }}</h3>
+    <mat-expansion-panel-header role="button">
+      <h3 id='{{ condition.name }}'>{{ condition.name }}</h3>
     </mat-expansion-panel-header>
+    <app-conditions-info [url]='condition.url'></app-conditions-info>
   </mat-expansion-panel>
 </div>

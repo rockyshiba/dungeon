@@ -23,6 +23,11 @@ export class DashboardComponent implements OnInit {
       'title': 'Classes',
       'description': 'Browse the available classes of Dungeons and Dragons 5th edition here.',
       'route': '/classes'
+    },
+    {
+      'title': 'Conditions',
+      'description': 'Look up the various conditions characters can experience in Dungeons and Dragons 5th edition.',
+      'route': '/conditions'
     }
   ];
 

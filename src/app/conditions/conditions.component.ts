@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Condition } from '../condition';
 import { HttpClient } from '@angular/common/http';
+import { NamedAPIResourceList } from '../named-apiresource-list';
 
 
 @Component({
@@ -12,14 +12,14 @@ import { HttpClient } from '@angular/common/http';
 export class ConditionsComponent implements OnInit {
 
   url = 'http://www.dnd5eapi.co/api/conditions';
-  conditions$: Observable<Condition>;
+  conditions$: Observable<NamedAPIResourceList>;
 
   constructor(
     private http: HttpClient
   ) { }
 
   ngOnInit() {
-    this.conditions$ = this.http.get<Condition>(this.url);
+    this.conditions$ = this.http.get<NamedAPIResourceList>(this.url);
   }
 
 }
