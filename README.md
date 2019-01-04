@@ -1,10 +1,12 @@
 # Dnd5e
 
-## Spells: Magic schools
+## Conditions component
 
-Adding magic schools component (magic-school.component) to accompany spell info as an expansion panel. Magic school component uses the async pipe instead of service.
+Initation of conditions component. Async pipe being used to retrieve all conditions from api. Mat-expansion-panel set up to contain condition information.
 
-To find Magic School information, user will have to find a spell and navigate to School header. Currently unknown if api supports the reverse: finding the associated spells based on the school of magic.
+Conditions component registered in router to "conditions".
+
+Condition model fixed to match result returned by api (_id, index, name, desc, url)
 
 ## Bootstrap
 

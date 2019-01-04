@@ -1,0 +1,10 @@
+<h2>Conditions</h2>
+<p>Below are the conditions described in DnD5e. To learn about a specific condition, click on one of them to reveal more information about that condition.</p>
+<app-loading-spinner *ngIf='!conditions$'></app-loading-spinner>
+<div *ngIf='conditions$ | async as conditions'>
+  <mat-expansion-panel *ngFor='let condition of conditions.results'>
+    <mat-expansion-panel-header>
+      <h3>{{ condition.name }}</h3>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+</div>

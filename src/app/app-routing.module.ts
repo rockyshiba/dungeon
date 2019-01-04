@@ -6,13 +6,15 @@ import { SpellInfoComponent } from '../app/spell-info/spell-info.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ClassesComponent } from './classes/classes.component';
 import { ClassInfoComponent } from './class-info/class-info.component';
+import { ConditionsComponent } from './conditions/conditions.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'spells/:id', component: SpellInfoComponent },
   { path: 'spells', component: SpellsComponent },
   { path: 'classes/:id', component: ClassInfoComponent },
-  { path: 'classes', component: ClassesComponent }
+  { path: 'classes', component: ClassesComponent },
+  { path: 'conditions', component: ConditionsComponent }
 ];
 
 @NgModule({
