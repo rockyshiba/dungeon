@@ -1,12 +1,10 @@
 # Dnd5e
 
-## Spells info additions
+## Spells: Magic schools
 
-Link to class associated with spell established via router link.
+Adding magic schools component (magic-school.component) to accompany spell info as an expansion panel. Magic school component uses the async pipe instead of service.
 
-[Angular Material Expansion](https://material.angular.io/components/expansion/api) included into project.
-
-Subclasses associated with spell included inside expansion panels on spell-info page using Angular Material Expansion.
+To find Magic School information, user will have to find a spell and navigate to School header. Currently unknown if api supports the reverse: finding the associated spells based on the school of magic.
 
 ## Bootstrap
 

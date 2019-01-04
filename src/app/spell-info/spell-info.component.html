@@ -22,9 +22,12 @@
 <h3>School</h3>
 <div>
   <!--Link to school-->
-  <a href="#">
-    {{ targetSpell.school.name }}
-  </a>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header role="button">
+      <h4>{{ targetSpell.school.name }}</h4>
+    </mat-expansion-panel-header>
+    <app-magic-school [url]='targetSpell.school.url'></app-magic-school>
+  </mat-expansion-panel>
 </div>
 <h3>Classes</h3>
 <div *ngFor="let class of targetSpell.classes">

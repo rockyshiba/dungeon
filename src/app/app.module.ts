@@ -22,6 +22,7 @@ import { ClassesComponent } from './classes/classes.component';
 import { ClassInfoComponent } from './class-info/class-info.component';
 import { SubclassComponent } from './subclass/subclass.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MagicSchoolComponent } from './magic-school/magic-school.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     LoadingSpinnerComponent,
     ClassesComponent,
     ClassInfoComponent,
-    SubclassComponent
+    SubclassComponent,
+    MagicSchoolComponent
   ],
   imports: [
     BrowserModule,
