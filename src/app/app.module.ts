@@ -26,6 +26,8 @@ import { MagicSchoolComponent } from './magic-school/magic-school.component';
 import { ConditionsComponent } from './conditions/conditions.component';
 import { ConditionsInfoComponent } from './conditions-info/conditions-info.component';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +55,8 @@ import { ConditionsInfoComponent } from './conditions-info/conditions-info.compo
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatExpansionModule
+    MatExpansionModule,
+    NgbModule
   ],
   providers: [
     HttpClientModule,

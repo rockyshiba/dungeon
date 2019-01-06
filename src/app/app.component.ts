@@ -8,10 +8,15 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Dnd5e';
+  navbarOpen = false;
+
+  toggleNavbar(): void {
+    this.navbarOpen = !this.navbarOpen;
+  }
 
   constructor(
     private titleService: Title,
     private router: Router
   ) {}
+
 }

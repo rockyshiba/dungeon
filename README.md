@@ -1,18 +1,16 @@
 # Dnd5e
 
-Conditions component corrected: conditions$ is now correctly typed to NamedAPIResourceList.
-
-Conditions now appears in the main navigation at the top of the page. Conditions now appear on the dashboard navigation.
-
-## Conditions info component
-
-Conditions info component initialized to contain information on a single condition based on the provided url. Appears as part of the expanded content inside Conditions component.
-
-Disc accompanying text is from the api. Consequently, the list-style-type has been set to 'none' to prevent the duplication of discs.
-
 ## Bootstrap
 
 Bootstrap CSS included in project via npm and angular.json. Dashboard starting to use bootstrap cards and navigation.
+
+ngbootstrap included in project.
+
+navbarOpen boolean variable in app.component.ts set initially to false. navbarOpen determines the display of nav items. toggleNavbar() switches navbarOpen between true and false.
+
+app.component.html now with bootstrap navbar elements. Menu button only appears for mobile screens and toggles the appearance of hidden menu items.
+
+## ---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
 
