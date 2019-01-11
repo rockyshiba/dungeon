@@ -2,7 +2,7 @@
 
 ## Spells
 
-Spells info component now correctly updates the Title element and meta name='description' tags in the head.
+Conditions component now correctly updates the Title element and meta name='description' tags in the head.
 
 ## ---
 
