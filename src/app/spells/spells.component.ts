@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SpellsService } from '../spells.service';
 import { NamedAPIResourceList } from '../named-apiresource-list';
 import { Toolbox } from '../toolbox';
-
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-spells',
@@ -17,7 +17,11 @@ export class SpellsComponent implements OnInit {
   tools: Toolbox = new Toolbox();
   loaded: boolean = false; // determines loading spinner component
 
-  constructor(private spellService: SpellsService) { }
+  constructor(
+    private spellService: SpellsService,
+    private titleService: Title,
+    private metaServce: Meta
+  ) { }
 
   searchSpells(name: string): void{
     // clear array
@@ -37,6 +41,12 @@ export class SpellsComponent implements OnInit {
   }
 
   ngOnInit() {
+    // title and meta description
+    this.titleService.setTitle('DnD5e Spells');
+    this.metaServce.updateTag({
+      name: 'description', content: 'DnD5e Spells directory'
+    });
+
     this.searchSpellList.results = [];
     this.searchSpellList.count = 0;
     this.spellService.getSpells().subscribe(results => {

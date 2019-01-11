@@ -1,14 +1,8 @@
 # Dnd5e
 
-## Bootstrap
+## Spells
 
-Bootstrap CSS included in project via npm and angular.json. Dashboard starting to use bootstrap cards and navigation.
-
-ngbootstrap included in project.
-
-navbarOpen boolean variable in app.component.ts set initially to false. navbarOpen determines the display of nav items. toggleNavbar() switches navbarOpen between true and false.
-
-app.component.html now with bootstrap navbar elements. Menu button only appears for mobile screens and toggles the appearance of hidden menu items.
+Spells component now correctly updates the Title element and meta name='description' tags in the head.
 
 ## ---
 
