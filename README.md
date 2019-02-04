@@ -1,8 +1,22 @@
 # Dnd5e
 
-## Spells
+## Proficiencies
 
-Conditions component now correctly updates the Title element and meta name='description' tags in the head.
+Starting point for proficiencies.
+
+### Proficiencies Service (proficiencies.service.ts)
+
+Initiated service for proficiencies with getProficiencies() returning all proficiencies from the dnd5e api.
+
+### Proficiencies Component (proficiencies/)
+
+List of all proficiencies populated using Proficiencies Service using getProficiencies() stored in property proficienciesList.
+
+Initiated component for proficiencies. Component has drop down list populated by proficienciesList.
+
+Component has search method searchProficiencies(name: string): void to filter proficienciesList and store filtered results in searchProficienciesList. If searchProficienciesList has array items, it is displayed to component's html as the user's search results.
+
+Search in this component works differently than in the Spells component. Using .include() user can type in partial string regardless of string's position in target search term. Will consider switching Spell component's search to use .include() instead of ==.
 
 ## ---
 

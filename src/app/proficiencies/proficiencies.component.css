@@ -1,0 +1,11 @@
+.proficiencies--viewport{
+    height: 200px;
+}
+
+.proficiencies--viewport li{
+    height: 20px;
+}
+
+.proficiencies--viewport a{
+    height: 20px;
+}

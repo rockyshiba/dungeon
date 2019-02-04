@@ -1,0 +1,37 @@
+<h2>Proficiencies</h2>
+<p>All proficiencies available in Dungeons and Dragons 5th edition. Browse through the proficiencies below or search for a specific proficiency.</p>
+<app-loading-spinner *ngIf='!loaded'></app-loading-spinner>
+<section *ngIf='proficienciesList.results' id='find-proficiencies'>
+  <h3>Find a Proficiency</h3>
+  <p>Use the drop down menu below to find a proficiency.</p>
+  <mat-form-field>
+    <mat-label>Select a proficiency</mat-label>
+    <select matNativeControl>
+      <option selected='selected' value=''>--Select a proficiency--</option>
+      <option *ngFor='let prof of proficienciesList.results' value='{{ prof.url }}'>
+        {{ prof.name }}
+      </option>
+    </select>
+  </mat-form-field>
+</section>
+<section *ngIf='proficienciesList.results' id='search--proficiencies'>
+  <h3>Search proficiency by name</h3>
+  <p>
+    Enter a keyword below to search for specific proficiencies.
+  </p>
+  <mat-form-field>
+    <mat-label>Find a proficiency</mat-label>
+    <input matInput placeholder='Proficiency' type='text' id='search--input-text' (keyup)='searchProficiencies(searchTerm.value)' #searchTerm>
+    <button mat-button *ngIf='searchTerm.value' matSuffix mat-icon-button aria-label='Clear' (click)="searchTerm.value = ''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+  <div *ngIf='searchProficienciesList.results' id='search--proficiencies-results'>
+    <p>Results: <strong>{{ searchProficienciesList.count }}</strong></p>
+    <cdk-virtual-scroll-viewport *ngIf='searchProficienciesList.results' class='proficiencies--viewport' itemSize='20'>
+      <mat-nav-list>
+        <a mat-list-item *cdkVirtualFor='let prof of searchProficienciesList.results' routerLinkActive='active-list-item'>{{ prof.name }}</a>
+      </mat-nav-list>
+    </cdk-virtual-scroll-viewport>
+  </div>
+</section>

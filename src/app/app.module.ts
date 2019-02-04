@@ -27,6 +27,7 @@ import { ConditionsComponent } from './conditions/conditions.component';
 import { ConditionsInfoComponent } from './conditions-info/conditions-info.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProficienciesComponent } from './proficiencies/proficiencies.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SubclassComponent,
     MagicSchoolComponent,
     ConditionsComponent,
-    ConditionsInfoComponent
+    ConditionsInfoComponent,
+    ProficienciesComponent
   ],
   imports: [
     BrowserModule,

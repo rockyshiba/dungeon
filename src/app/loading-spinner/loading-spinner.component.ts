@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./loading-spinner.component.css']
 })
 export class LoadingSpinnerComponent implements OnInit {
+  delay: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+    setTimeout(function(){
+      this.delay = true;
+    }, 10000);
   }
 
 }
