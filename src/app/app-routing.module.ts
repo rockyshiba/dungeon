@@ -8,6 +8,7 @@ import { ClassesComponent } from './classes/classes.component';
 import { ClassInfoComponent } from './class-info/class-info.component';
 import { ConditionsComponent } from './conditions/conditions.component';
 import { ProficienciesComponent } from './proficiencies/proficiencies.component';
+import { ProficiencyInfoComponent } from './proficiency-info/proficiency-info.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'classes/:id', component: ClassInfoComponent },
   { path: 'classes', component: ClassesComponent },
   { path: 'conditions', component: ConditionsComponent },
-  { path: 'proficiencies', component: ProficienciesComponent}
+  { path: 'proficiencies', component: ProficienciesComponent},
+  { path: 'proficiencies/:id', component: ProficiencyInfoComponent}
 ];
 
 @NgModule({

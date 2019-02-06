@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { NamedAPIResourceList } from '../named-apiresource-list';
 import { ProficienciesService } from '../proficiencies.service';
+import { Toolbox } from '../toolbox';
 
 @Component({
   selector: 'app-proficiencies',
@@ -12,6 +13,8 @@ export class ProficienciesComponent implements OnInit {
 
   proficienciesList: NamedAPIResourceList = new NamedAPIResourceList();
   searchProficienciesList: NamedAPIResourceList = new NamedAPIResourceList();
+  profIndex: string;
+  tools: Toolbox = new Toolbox();
   loaded: boolean; // determines loading spinner component
 
   constructor(
@@ -32,6 +35,10 @@ export class ProficienciesComponent implements OnInit {
         this.searchProficienciesList.results.push(prof);
       }
     }
+  }
+
+  changeProfIndex(value: string){
+    this.profIndex = this.tools.getEntityNumber(value);
   }
 
   ngOnInit() {

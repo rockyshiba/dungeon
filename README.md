@@ -1,22 +1,20 @@
 # Dnd5e
 
-## Proficiencies
+## Proficiency-info
 
-Starting point for proficiencies.
+Starting point for proficiency-info.
 
-### Proficiencies Service (proficiencies.service.ts)
+## Proficiencies-component
 
-Initiated service for proficiencies with getProficiencies() returning all proficiencies from the dnd5e api.
+Adding links to component page. Each link is routed to the Proficiency-info component with an id parameter.
 
-### Proficiencies Component (proficiencies/)
+## Proficiency-info component
 
-List of all proficiencies populated using Proficiencies Service using getProficiencies() stored in property proficienciesList.
+Initializing component for displaying information on a single proficiency using the id of the proficiency.
 
-Initiated component for proficiencies. Component has drop down list populated by proficienciesList.
+## Proficiencies service
 
-Component has search method searchProficiencies(name: string): void to filter proficienciesList and store filtered results in searchProficienciesList. If searchProficienciesList has array items, it is displayed to component's html as the user's search results.
-
-Search in this component works differently than in the Spells component. Using .include() user can type in partial string regardless of string's position in target search term. Will consider switching Spell component's search to use .include() instead of ==.
+Added getProficiency(id: string) to service. Returns an observable of proficiency.ts. Used in proficiency-info component.
 
 ## ---
 

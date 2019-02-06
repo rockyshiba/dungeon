@@ -1,0 +1,27 @@
+<a routerLink='/proficiencies'>Return to Proficiencies</a>
+<section *ngIf='targetProficiency'>
+  <h2>{{ targetProficiency.name }}</h2>
+  <h3>Type: {{ targetProficiency.type }}</h3>
+  <h3 id='classes'>
+    <a routerLink='/classes'>Classes</a>
+  </h3>
+  <div>
+    <p *ngIf='!targetProficiency.classes.length'>
+      No associated classes.
+    </p>
+    <ul>
+      <li *ngFor='let class of targetProficiency.classes'>
+        <a routerLink='/classes/{{ this.toolbox.getEntityNumber(class.url) }}'>{{ class.name }}</a>
+      </li>
+    </ul>
+  </div>
+  <h3 id='races'><a>Races</a></h3>
+  <div>
+    <p *ngIf='!targetProficiency.races.length'>
+      No associated races.
+    </p>
+    <ul>
+      <li *ngFor='let race of targetProficiency.races'>{{ race.name }}</li>
+    </ul>
+  </div>
+</section>

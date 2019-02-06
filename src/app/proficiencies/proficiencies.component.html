@@ -6,13 +6,14 @@
   <p>Use the drop down menu below to find a proficiency.</p>
   <mat-form-field>
     <mat-label>Select a proficiency</mat-label>
-    <select matNativeControl>
+    <select matNativeControl (change)='changeProfIndex(proficiencySelect.value)' #proficiencySelect>
       <option selected='selected' value=''>--Select a proficiency--</option>
       <option *ngFor='let prof of proficienciesList.results' value='{{ prof.url }}'>
         {{ prof.name }}
       </option>
     </select>
   </mat-form-field>
+  <a routerLink='/proficiencies/{{ profIndex }}'>Click for Proficiency info</a>
 </section>
 <section *ngIf='proficienciesList.results' id='search--proficiencies'>
   <h3>Search proficiency by name</h3>
@@ -30,7 +31,7 @@
     <p>Results: <strong>{{ searchProficienciesList.count }}</strong></p>
     <cdk-virtual-scroll-viewport *ngIf='searchProficienciesList.results' class='proficiencies--viewport' itemSize='20'>
       <mat-nav-list>
-        <a mat-list-item *cdkVirtualFor='let prof of searchProficienciesList.results' routerLinkActive='active-list-item'>{{ prof.name }}</a>
+        <a mat-list-item *cdkVirtualFor='let prof of searchProficienciesList.results' routerLinkActive='active-list-item' routerLink='/proficiencies/{{ tools.getEntityNumber(prof.url) }}'>{{ prof.name }}</a>
       </mat-nav-list>
     </cdk-virtual-scroll-viewport>
   </div>
